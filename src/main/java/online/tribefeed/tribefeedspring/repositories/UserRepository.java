@@ -1,4 +1,15 @@
 package online.tribefeed.tribefeedspring.repositories;
 
-public interface UserRepository {
+import online.tribefeed.tribefeedspring.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    Optional<User> findByEmail(String email);
+
+    Boolean existsByEmail(String email);
 }

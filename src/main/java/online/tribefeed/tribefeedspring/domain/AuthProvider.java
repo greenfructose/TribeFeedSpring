@@ -1,4 +1,8 @@
 package online.tribefeed.tribefeedspring.domain;
 
-public enum AuthProvider {
+public enum  AuthProvider {
+    local,
+    facebook,
+    google,
+    github
 }
